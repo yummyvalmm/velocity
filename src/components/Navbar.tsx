@@ -7,9 +7,18 @@ import { products } from '../data/products';
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const { cartCount } = useCart();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -180,14 +189,54 @@ const Navbar: React.FC = () => {
               </span>
             )}
           </Link>
-          <button className="md:hidden">
+          <button className="md:hidden" onClick={() => setIsMobileMenuOpen(true)}>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
           </button>
         </div>
       </div>
-    </nav >
+
+      {/* Mobile Menu Overlay - Stage Menu */}
+      <div className={`fixed inset-0 bg-white z-[60] flex flex-col pt-24 px-6 transition-all duration-500 ease-out ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
+        <button
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="absolute top-6 right-6 p-2 hover:bg-gray-100 rounded-full transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div className="flex flex-col space-y-2">
+          {['Men', 'Women', 'Gear', 'Sale'].map((item, index) => (
+            <Link
+              key={item}
+              to={`/collections/${item.toLowerCase()}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`text-5xl font-impact uppercase tracking-tight hover:text-gray-500 transition-all duration-500 transform ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              {item}
+            </Link>
+          ))}
+        </div>
+
+        <div className={`mt-auto mb-10 space-y-6 transition-all duration-700 delay-500 ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="h-px bg-gray-200 w-full"></div>
+          <div className="flex flex-col space-y-4 text-sm font-bold uppercase tracking-wider text-gray-500">
+            <Link to="/brand-story" onClick={() => setIsMobileMenuOpen(false)}>Our Story</Link>
+            <Link to="/innovation" onClick={() => setIsMobileMenuOpen(false)}>Innovation</Link>
+            <Link to="#" onClick={() => setIsMobileMenuOpen(false)}>Support</Link>
+          </div>
+          <div className="flex gap-4">
+            {/* Social placeholders could go here */}
+            <div className="w-10 h-10 bg-black rounded-full"></div>
+            <div className="w-10 h-10 bg-black rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

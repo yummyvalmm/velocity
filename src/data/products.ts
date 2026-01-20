@@ -17,7 +17,7 @@ export const products: Product[] = [
         category: "Running",
         type: "Men",
         price: "$160",
-        image: "/images/products/velocity_air_sprint_1768926452423.png",
+        image: "/images/products/velocity_air_sprint_1768926452423.webp",
         label: "Best Seller"
     },
     {
@@ -26,7 +26,7 @@ export const products: Product[] = [
         category: "Running",
         type: "Men",
         price: "$250",
-        image: "/images/products/zoom_x_vaporfly_1768926471040.png"
+        image: "/images/products/zoom_x_vaporfly_1768926471040.webp"
     },
     {
         id: 3,
@@ -34,7 +34,7 @@ export const products: Product[] = [
         category: "Running",
         type: "Men",
         price: "$150",
-        image: "/images/products/pegasus_turbo_1768926496142.png"
+        image: "/images/products/pegasus_turbo_1768926496142.webp"
     },
     {
         id: 4,
@@ -42,7 +42,7 @@ export const products: Product[] = [
         category: "Running",
         type: "Men",
         price: "$160",
-        image: "/images/products/react_infinity_1768926518304.png"
+        image: "/images/products/react_infinity_1768926518304.webp"
     },
     {
         id: 5,
@@ -50,7 +50,7 @@ export const products: Product[] = [
         category: "Running",
         type: "Men",
         price: "$180",
-        image: "/images/products/invincible_run_3_1768926551352.png"
+        image: "/images/products/invincible_run_3_1768926551352.webp"
     },
 
     // Women's Running
@@ -60,7 +60,7 @@ export const products: Product[] = [
         category: "Running",
         type: "Women",
         price: "$145",
-        image: "/images/products/velocity_glide_women_1768926576721.png",
+        image: "/images/products/velocity_glide_women_1768926576721.webp",
         label: "New"
     },
     {
@@ -69,7 +69,7 @@ export const products: Product[] = [
         category: "Running",
         type: "Women",
         price: "$130",
-        image: "/images/products/pegasus_40_women_1768926595065.png"
+        image: "/images/products/pegasus_40_women_1768926595065.webp"
     },
     {
         id: 8,
@@ -77,7 +77,7 @@ export const products: Product[] = [
         category: "Running",
         type: "Women",
         price: "$250",
-        image: "/images/products/vaporfly_3_women_1768926612647.png"
+        image: "/images/products/vaporfly_3_women_1768926612647.webp"
     },
     {
         id: 9,
@@ -95,7 +95,7 @@ export const products: Product[] = [
         category: "Basketball",
         type: "Men",
         price: "$200",
-        image: "/images/products/air_jordan_xxxviii_1768926664041.png",
+        image: "/images/products/air_jordan_xxxviii_1768926664041.webp",
         label: "Trending"
     },
     {
@@ -104,7 +104,7 @@ export const products: Product[] = [
         category: "Basketball",
         type: "Men",
         price: "$200",
-        image: "/images/products/lebron_xxi_1768926681433.png"
+        image: "/images/products/lebron_xxi_1768926681433.webp"
     },
     {
         id: 12,
@@ -112,7 +112,7 @@ export const products: Product[] = [
         category: "Basketball",
         type: "Men",
         price: "$190",
-        image: "/images/products/gt_cut_3_1768926705198.png"
+        image: "/images/products/gt_cut_3_1768926705198.webp"
     },
     {
         id: 13,
@@ -120,7 +120,7 @@ export const products: Product[] = [
         category: "Basketball",
         type: "Unisex",
         price: "$85",
-        image: "/images/products/giannis_immortality_1768926722149.png"
+        image: "/images/products/giannis_immortality_1768926722149.webp"
     },
 
     // Training & Lifestyle
@@ -130,7 +130,7 @@ export const products: Product[] = [
         category: "Training",
         type: "Men",
         price: "$150",
-        image: "/images/products/metcon_9_1768926763954.png"
+        image: "/images/products/metcon_9_1768926763954.webp"
     },
     {
         id: 15,
@@ -138,7 +138,7 @@ export const products: Product[] = [
         category: "Training",
         type: "Women",
         price: "$120",
-        image: "/images/products/free_metcon_5_1768926785299.png"
+        image: "/images/products/free_metcon_5_1768926785299.webp"
     },
     {
         id: 16,
@@ -146,7 +146,7 @@ export const products: Product[] = [
         category: "Lifestyle",
         type: "Men",
         price: "$115",
-        image: "/images/products/dunk_low_retro_1768926807026.png",
+        image: "/images/products/dunk_low_retro_1768926807026.webp",
         label: "Limited"
     },
     {
@@ -155,7 +155,7 @@ export const products: Product[] = [
         category: "Lifestyle",
         type: "Unisex",
         price: "$115",
-        image: "/images/products/air_force_1_1768926829227.png"
+        image: "/images/products/air_force_1_1768926829227.webp"
     },
     {
         id: 18,
@@ -163,7 +163,7 @@ export const products: Product[] = [
         category: "Lifestyle",
         type: "Unisex",
         price: "$105",
-        image: "/images/products/blazer_mid_77_1768926851010.png"
+        image: "/images/products/blazer_mid_77_1768926851010.webp"
     },
     {
         id: 19,
@@ -171,7 +171,7 @@ export const products: Product[] = [
         category: "Lifestyle",
         type: "Men",
         price: "$130",
-        image: "/images/products/air_max_90_1768926871691.png"
+        image: "/images/products/air_max_90_1768926871691.webp"
     },
 
     // Gear & Accessories
@@ -181,7 +181,7 @@ export const products: Product[] = [
         category: "Gear",
         type: "Gear",
         price: "$85",
-        image: "/images/products/elite_pro_backpack_1768926919615.png"
+        image: "/images/products/elite_pro_backpack_1768926919615.webp"
     },
     {
         id: 21,
@@ -189,7 +189,7 @@ export const products: Product[] = [
         category: "Gear",
         type: "Gear",
         price: "$18",
-        image: "/images/products/velocity_crew_socks_1768926945184.png"
+        image: "/images/products/velocity_crew_socks_1768926945184.webp"
     },
     {
         id: 22,
@@ -197,7 +197,7 @@ export const products: Product[] = [
         category: "Gear",
         type: "Gear",
         price: "$25",
-        image: "/images/products/hydration_bottle_1768926961809.png"
+        image: "/images/products/hydration_bottle_1768926961809.webp"
     },
     {
         id: 23,
