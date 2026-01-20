@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  price       Float
+  stock       Int
+  image       String?
+  category    String   @default("Running")
+  sizes       String   // e.g. "US 7, US 8, US 9"
+  colors      String   // e.g. "Red, Black"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Customer {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  phone     String?
+  orders    Order[]
+  createdAt DateTime @default(now())
+}
+
+model Order {
+  id          String   @id @default(uuid())
+  total       Float
+  status      String   @default("Pending") // Pending, Shipped, Delivered
+  createdAt   DateTime @default(now())
+  
+  customerId  Int
+  customer    Customer @relation(fields: [customerId], references: [id])
+  
+  items       String? // Simple JSON dump of items for MVP
+}
